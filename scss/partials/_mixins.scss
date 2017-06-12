@@ -1,0 +1,6 @@
+//SASS MIXINS
+@mixin mobile {
+    @media all and (min-width: 40rem) {
+        @content;
+    }
+}

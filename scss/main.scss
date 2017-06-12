@@ -1,0 +1,293 @@
+/* -- DEFAULTS -- */
+
+@import url(../font-awesome/css/font-awesome.min.css);
+@font-face {
+    font-family: 'Damion';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Damion'), url(https://fonts.gstatic.com/s/damion/v6/ksD1WDDgZAyMd1VY75GZ6evvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+}
+
+@import "./partials/variables";
+@import "./partials/mixins";
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: $body-font;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    line-height: 3rem;
+    font-size: 1.3rem;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.box {
+    width: 90%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+
+/* -- FIRST DIV -- */
+
+.bg-white {
+    background-color: $white;
+}
+
+#company {
+    font-size: 3rem;
+}
+
+.first ul {
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    border: 1px solid $dark-grey
+}
+
+.first {
+    ul {
+        li {
+            a {
+                display: block;
+                border-bottom: 1px solid $grey;
+                padding: 1rem;
+                background-color: $light-grey;
+                &:hover {
+                    background-color: $sections-link-hover-bg;
+                    border-bottom: 1px solid $sections-link-hover-bg;
+                    color: $white;
+                    text-shadow: 0 1px 1px $sections-link-hover-shadow;
+                }
+            }
+            &:nth-of-type(6) a {
+                border-bottom: none;
+            }
+        }
+    }
+    h1 {
+        font-family: $main-font;
+        margin: 1.5rem 2rem 1.5rem 0;
+    }
+}
+
+
+/* -- SECOND DIV -- */
+
+.bg-people {
+    background-image: url(../images/bg/creative-office.jpg);
+    background-size: cover;
+    /* bg image will always cover the assigned area regardless of screen-size */
+    color: $white;
+    padding: 2rem 0 3rem 0;
+    a {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        margin: 0 0 1rem 0;
+        border: 1px solid $white;
+        background-color: $black;
+        transition: background-color 0.5s ease, border 0.5s ease;
+        &:hover {
+            background-color: $people-link-hover-bg;
+            border: 1px solid $people-link-hover-bg;
+        }
+    }
+    h1 {
+        span {
+            &:first-of-type {
+                /* accessing '+' in <h1> */
+                font-family: $titles-font;
+                vertical-align: middle;
+                font-size: 4rem;
+                color: $primary-color;
+            }
+            &:last-of-type {
+                font-style: italic;
+                text-transform: lowercase;
+            }
+        }
+    }
+}
+
+
+/* -- THIRD DIV -- */
+
+.bg-gold {
+    ul {
+        li {
+            a {
+                display: block;
+                padding: 1rem;
+                background-color: $white;
+                text-decoration: none;
+                border-bottom: 1px solid $grey;
+                &:hover {
+                    /* when <a> that belongs to .bg-gold is hovered, color the text of second <span> that belongs to <a> to darkgoldenrod */
+                    color: $sections-link-hover-bg;
+                    background-color: $light-grey;
+                }
+            }
+            width: 100%;
+            &:last-child {
+                a {
+                    border: none;
+                }
+            }
+            span {
+                &:last-child {
+                    text-transform: uppercase;
+                    margin: 0 0 0 1rem;
+                }
+            }
+        }
+    }
+    background-color: $primary-color;
+    padding: 2rem 0;
+}
+
+
+/* -- FOURTH DIV -- */
+
+.second {
+    ul {
+        &:after {
+            /* clear <li> floated left */
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    h1 {
+        span {
+            &:first-of-type {
+                /* accessing '+' in <h1> */
+                font-family: $titles-font ;
+                vertical-align: middle;
+                font-size: 4rem;
+            }
+            &:last-of-type {
+                font-style: italic;
+            }
+        }
+    }
+    ul {
+        li {
+            img {
+                width: 100%;
+                height: auto;
+            }
+            float: left;
+            width: 50%;
+            padding: 0 1rem 0 0;
+        }
+    }
+    .names {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 0 1rem 0;
+    }
+    p {
+        padding: 0 1rem 0 0;
+        line-height: 1.5rem;
+        &:last-child {
+            padding: 0;
+        }
+    }
+    padding: 2rem 0;
+}
+
+
+/* -- FIFTH DIV -- */
+
+.bg-black {
+    h1 {
+        text-transform: uppercase;
+        span {
+            &:first-of-type {
+                /* accessing '+' in <h1> */
+                font-family: $titles-font;
+                vertical-align: middle;
+                font-size: 4rem;
+            }
+            &:last-of-type {
+                font-style: italic;
+                text-transform: lowercase;
+            }
+        }
+    }
+    .container {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        ul {
+            li {
+                margin: 0 0 0.8rem 0;
+            }
+            margin: 0 0 1.2rem 0;
+        }
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
+    background-color: $container-bg;
+    color: $white;
+    padding: 2rem 0 3rem 0;
+}
+
+.form-box {
+    input {
+        border: none;
+        width: 100%;
+        height: 2rem;
+        padding: 1.5rem;
+    }
+    input[type="submit"] {
+        border: none;
+        background-color: $primary-color;
+        color: $black;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 1.3rem 2.3rem 2.3rem 2.3rem;
+    }
+    textarea {
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+    }
+    padding: 0.5rem 0;
+}
+
+
+/* -- SIXTH DIV -- */
+
+.third {
+    p {
+        text-align: center;
+        line-height: 1.6rem;
+    }
+}
+
+
+@import "./partials/queries";

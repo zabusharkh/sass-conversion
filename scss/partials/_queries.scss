@@ -1,0 +1,158 @@
+/* -- MEDIA QUERIES -- */
+
+@include mobile {
+    h1 {
+        line-height: 3.5rem;
+        font-size: 2rem;
+    }
+    /* -- FIRST DIV -- */
+    .first {
+        ul {
+            li {
+                a {
+                    display: inline;
+                    font-size: 1.2rem;
+                    padding: 0 1rem;
+                    border: none;
+                    background-color: $white;
+                    border-right: 1px solid ;
+                    &:hover {
+                        background-color: $white;
+                        border-bottom: none;
+                        color: $secondary-color;
+                        text-shadow: none;
+                    }
+                }
+                &:first-of-type a {
+                    /* access the first <li> */
+                    color: $primary-color;
+                    padding: 0 1rem 0 0;
+                }
+                &:nth-of-type(6) a {
+                    border-right: none;
+                }
+                display: inline;
+            }
+            margin: 0 0 1rem 0;
+            border: none;
+        }
+        h1 {
+            margin: 1.5rem 2rem 1.5rem 0;
+        }
+    }
+    /* -- SECOND DIV -- */
+    .bg-people {
+        a {
+            display: inline-block;
+            color: $white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            margin: 0 1rem 0 0;
+            border: 1px solid $white;
+            background-color: $black;
+            transition: background-color 0.5s ease, border 0.5s ease;
+            &:hover {
+                background-color: $people-link-hover-bg;
+                border: 1px solid $people-link-hover-bg;
+            }
+        }
+    }
+    /* -- THIRD DIV -- */
+    .bg-gold {
+        ul {
+            li {
+                a {
+                    span {
+                        &:first-child {
+                            border: 4px solid $white;
+                        }
+                    }
+                    &:hover {
+                        span {
+                            &:first-child {
+                                /* when <a> that belongs to .bg-gold is hovered ... */
+                                border: 4px solid #999;
+                            }
+                            &::last-child {
+                                /* when <a> that belongs to .bg-gold is hovered, color the text of second <span> that belongs to <a> to darkgoldenrod */
+                                color: $dark-grey;
+                            }
+                        }
+                    }
+                    background-color: transparent;
+                    text-decoration: none;
+                    border: none;
+                }
+                span {
+                    &:first-child {
+                        /* this span holds the svg image - set to white bg and round shape */
+                        padding: 1.5rem 0 0 0;
+                        margin: 2rem auto 1rem auto;
+                        width: 5.5rem;
+                        height: 5.5rem;
+                        border-radius: 45px;
+                        background-color: $white;
+                    }
+                    &:last-child {
+                        margin: 0 auto 2rem auto;
+                    }
+                    display: block;
+                }
+                width: 25%;
+                float: left;
+                text-align: center;
+                border: none;
+            }
+            &::after {
+                /* clear <li> floated left */
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        padding: 0;
+    }
+    /* -- FOURTH DIV -- */
+    .second {
+        ul {
+            li {
+                width: 25%;
+            }
+        }
+        .names {
+            margin: 0.5rem 0;
+        }
+        p {
+            width: 50%;
+            float: left;
+        }
+        &::after {
+            /* clear <p> floated left */
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    /* -- FIFTH DIV -- */
+    .bg-black {
+        .container {
+            img {
+                width: 80%;
+            }
+            width: 50%;
+            float: left;
+            padding: 0 2rem 0 0;
+        }
+    }
+    .box {
+        &::after {
+            /* clear <div class="container"> floated left */
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    .form-box {
+        padding: 0.5rem;
+    }
+}
